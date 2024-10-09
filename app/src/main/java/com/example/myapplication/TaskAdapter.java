@@ -20,6 +20,10 @@ public class TaskAdapter extends ArrayAdapter<Tasks> {
     Context context;
     int resource;
 
+    public interface TaskSelected{
+        public void onTaskClick(int position);
+    }
+
     public TaskAdapter(@NonNull Context context, int resource, @NonNull List<Tasks> objects)
     {
         super(context, resource, objects);
